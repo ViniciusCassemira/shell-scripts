@@ -4,10 +4,11 @@
 PROJECT_NAME=test
 KEY_NAME=key_auth
 KEY_COMMENT=projeto-malconX
-KEY_DIR=~/.ssh/$PROJECT_NAME
+KEY_DIR="$HOME/.ssh/$PROJECT_NAME"
 KEY_PEM_NAME="${KEY_NAME}-pem"
 
 mkdir -p "$KEY_DIR"
+chmod 700 "$KEY_DIR"
 
 #Generate key
 ssh-keygen -t rsa -b 4096 -f $KEY_DIR/$KEY_NAME -N "" -C $KEY_COMMENT
@@ -21,7 +22,8 @@ ssh-keygen -p -m PEM -f $KEY_DIR/$KEY_PEM_NAME -P "" -N ""
 
 # Permission ssh path and private key
 chmod 700 ~/.ssh
-chmod 600 ~/.ssh/$KEY_NAME
+chmod 600 "$KEY_DIR/$KEY_NAME"
+chmod 600 "$KEY_DIR/$KEY_PEM_NAME"
 
 # echo "Key generated successfully"
 # echo "Run 'cat ${KEY_DIR}/${KEY_NAME}.pub' to see your public key"
