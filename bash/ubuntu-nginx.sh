@@ -53,4 +53,3 @@ sudo ln -s /etc/nginx/sites-available/$workdir /etc/nginx/sites-enabled/
 sudo nginx -t && sudo systemctl restart nginx
 
 echo "Your web-service can be accessed at: http://$server_ip"
-echo "by Vinicius Cassemira"

@@ -1,30 +1,33 @@
 #!/bin/bash
 
-#environment variables for the script
+# Environment variables for the script
 PROJECT_NAME=test
 KEY_NAME=key_auth
-KEY_COMMENT=projeto-malconX
+KEY_COMMENT="projeto-malconX"
 KEY_DIR="$HOME/.ssh/$PROJECT_NAME"
 KEY_PEM_NAME="${KEY_NAME}-pem"
 
+# Create the key directory
 mkdir -p "$KEY_DIR"
 chmod 700 "$KEY_DIR"
 
-#Generate key
-ssh-keygen -t rsa -b 4096 -f $KEY_DIR/$KEY_NAME -N "" -C $KEY_COMMENT
+# Generate SSH key pair
+ssh-keygen -t rsa -b 4096 -f "$KEY_DIR/$KEY_NAME" -N "" -C "$KEY_COMMENT"
 
-#Add public key authorized_keys file
-cat $KEY_DIR/$KEY_NAME.pub >> ~/.ssh/authorized_keys
+# Ensure authorized_keys file exists
+touch ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
 
-#converts private key from OPENSSH to PEM format
+# Append the public key to authorized_keys
+cat "$KEY_DIR/$KEY_NAME.pub" >> ~/.ssh/authorized_keys
+
+# Copy private key and convert to PEM format
 cp "$KEY_DIR/$KEY_NAME" "$KEY_DIR/$KEY_PEM_NAME"
-ssh-keygen -p -m PEM -f $KEY_DIR/$KEY_PEM_NAME -P "" -N ""
+ssh-keygen -p -m PEM -f "$KEY_DIR/$KEY_PEM_NAME" -P "" -N ""
 
-# Permission ssh path and private key
+# Set permissions for .ssh directory and keys
 chmod 700 ~/.ssh
 chmod 600 "$KEY_DIR/$KEY_NAME"
 chmod 600 "$KEY_DIR/$KEY_PEM_NAME"
 
-# echo "Key generated successfully"
-# echo "Run 'cat ${KEY_DIR}/${KEY_NAME}.pub' to see your public key"
-# echo "Run 'cat ${KEY_DIR}/${KEY_NAME}' to see your private key | [ sensitive key, be careful ]"
+echo "✅ SSH keys successfully generated in: $KEY_DIR"
