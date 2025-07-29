@@ -7,9 +7,9 @@
 chmod +x system-auto-update.sh
 bash system-auto-update.sh
 
-# SSH Key generation
-chmod +x ssh-keygen.sh
-bash ssh-keygen.sh
+# SSH Config
+chmod +x ssh_server_config.sh
+bash ssh_server_config.sh
 
 # Docker and Docker Compose install
 chmod +x docker-setup.sh
