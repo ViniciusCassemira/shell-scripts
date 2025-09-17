@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# From a directory, this script will recursively delete files that have the same extension, such as.logs,.txt or.json for example.
+
 read -p "Choice the .extension you want to recoursive delete with . (.txt for example): " extension
 read -p "Choose the path where the recursive deletion will happen: " path
 

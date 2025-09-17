@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#This script will ...
+# This script will interact with the Heroku CLI, being able to view apps, logs, and execute commands on existing apps
 
 opcao=0
 
@@ -20,7 +20,7 @@ do
 
     case $opcao in
     1)
-        heroku apps || echo "Erro: Não oi possível visualizar os seus apps da Heroku"
+        heroku apps || echo "Erro: Não foi possível visualizar os seus apps da Heroku"
         echo""
         echo "Press Enter to continue"
         read temp

@@ -1,4 +1,7 @@
-# Download docker script install to use
+#!/bin/bash
+
+# This script will install and configure Docker and docker compose using official URL
+
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 

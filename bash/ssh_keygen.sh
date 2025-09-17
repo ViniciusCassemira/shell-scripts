@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This script generates an SSH key in ed25519 format, bringing you the public and private key, being able to generate the private key in PEM format, in addition to being able to save the public key in your authorized_keys
+
 SSH_PATH=~/.ssh
 DEFAULT_NAME=key_auth
 

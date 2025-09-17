@@ -1,6 +1,7 @@
+#!/bin/bash
+
 # This command will config /etc/ssh/sshd_config file to allow SSH key login, 
 # unable login with password and other security configs
-#!/bin/bash
 
 #1. Format .ssh/
 read -p "Antes de continuar, você deseja formatar o arquivo authorized_keys? (Y/N): " resetKeys

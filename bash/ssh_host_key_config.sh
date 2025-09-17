@@ -1,3 +1,8 @@
+#!/bin/bash
+
+# This script helps you set up multiple projects on GitHub and GitLab. It asks how many projects you want to register, generates individual SSH keys for each one, and updates the ~/.ssh/config file automatically.
+# The public key must be added to the Deploy Keys of the remote repository, while the private key is safe on your computer. At the end, the script also shows the commands needed to clone or update your repository's remote with the new key.
+
 max_key=4
 
 while true; do
