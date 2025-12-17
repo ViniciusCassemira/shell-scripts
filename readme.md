@@ -1,5 +1,6 @@
 # Shell Scripts
-
+<a target="_blank" href="https://github.com/ViniciusCassemira/shell-scripts"><img src="https://img.shields.io/github/last-commit/ViniciusCassemira/shell-scripts" /></a>
+                                                                                                                                                                                                                                                                                                                        
 Este repositório reúne uma coleção de scripts em Bash para automatizar tarefas comuns no dia a dia de desenvolvimento.
 
 Scripts shell nada mais são do que conjuntos de comandos executados no terminal, que podem automatizar tarefas do sistema, como criar diretórios, configurar chaves SSH ou instalar pacotes.
