@@ -10,3 +10,7 @@ RUN apt-get update && \
     nano \
     wget \
     && rm -rf /var/lib/apt/lists/*
+    
+WORKDIR /
+RUN git clone https://github.com/ViniciusCassemira/shell-scripts.git \
+    && chmod -R +x /shell-scripts
