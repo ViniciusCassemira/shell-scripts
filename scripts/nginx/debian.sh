@@ -2,7 +2,7 @@
 
 # This script install nginx and configure a default application.
 # Notes: You can use -d flag do choice folder name.
-# Example: ./ubuntu-nginx.sh -d project
+# Example: ./debian.sh -d project
 # If you dont declare, the script will use default project name.
 
 while getopts d: flag

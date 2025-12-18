@@ -6,7 +6,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 
 # Testing installation
-if docker compose -v &> /dev/null; then
+if docker -v &> /dev/null; then
   echo "docker installed successfully"
 else
   echo "docker not installed"
