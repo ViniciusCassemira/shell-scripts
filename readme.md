@@ -13,6 +13,11 @@ Este repositório apresenta alguns laboratórios em Docker para simular ambiente
 Com ele, é possível testar, validar e entender o comportamento dos scripts de forma isolada, sem a necessidade de configurar uma máquina real ou afetar o sistema local.  
 [Clique aqui para saber mais](./lab/)
 
+```bash
+    # Creating a lab for testing
+    docker run -it --name lab-buntu viniciuscassemira/shell-scripts-lab:ubuntu24.04 bash
+```
+
 ---
 
 **Nota:** Nota: Inicialmente, os scripts foram desenvolvidos e testados apenas em sistemas baseados em Debian com Bash. Alguns comandos podem variar dependendo do seu sistema ou shell. Em breve serão reescritos para abranger outros sistemas.
